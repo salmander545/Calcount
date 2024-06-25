@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalCount - Your Fitness Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header parallax">
+        <div class="container">
+            <h1>CalCount</h1>
+            <p>Your Ultimate Fitness Companion</p>
+        </div>
+    </header>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#healthy-snacks">Healthy Snacks</a>
+            <a href="#fitness-plans">Fitness Plans</a>
+            <a href="#calorie-counter">Calorie Counter</a>
+            <a href="#download">Download APK</a>
+        </div>
+    </nav>
+    <main>
+        <section id="healthy-snacks" class="content-section">
+            <div class="container">
+                <h2>Healthy Snacks Menu</h2>
+                <p>Discover a variety of delicious and nutritious snacks that will keep you energized throughout the day.</p>
+                <ul>
+                    <li>Fruit and Nut Mix</li>
+                    <li>Greek Yogurt with Honey and Berries</li>
+                    <li>Veggie Sticks with Hummus</li>
+                    <li>Protein Bars</li>
+                    <li>Smoothie Bowls</li>
+                </ul>
+            </div>
+        </section>
+        <section id="fitness-plans" class="content-section">
+            <div class="container">
+                <h2>Fitness Plans</h2>
+                <p>Personalized fitness plans designed to help you reach your goals, whether you're a beginner or a pro.</p>
+                <ul>
+                    <li>Beginner Workouts</li>
+                    <li>Intermediate Training</li>
+                    <li>Advanced Programs</li>
+                    <li>Strength Training</li>
+                    <li>Cardio Routines</li>
+                </ul>
+            </div>
+        </section>
+        <section id="calorie-counter" class="content-section">
+            <div class="container">
+                <h2>Calorie Counter</h2>
+                <p>Track your daily calorie intake and monitor your nutrition with our easy-to-use calorie counter.</p>
+                <ul>
+                    <li>Food Database</li>
+                    <li>Meal Logging</li>
+                    <li>Progress Tracking</li>
+                    <li>Nutrition Insights</li>
+                    <li>Goal Setting</li>
+                </ul>
+            </div>
+        </section>
+        <section id="download" class="content-section">
+            <div class="container">
+                <h2>Download CalCount APK</h2>
+                <p>Get the CalCount app on your Android device. Click the button below to download the APK file.</p>
+                <a href=""C:\Users\Advit Bhardwaj\Downloads\Calcount-v2-release.apk"" download="CalCount.apk">
+                    <button id="downloadButton">Download APK</button>
+                </a>
+                <div id="message"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CalCount. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header.parallax {
+    background-attachment: fixed;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 3em;
+    z-index: 1;
+}
+
+.header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    z-index: 1;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #4285F4;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.content-section {
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.content-section h2 {
+    font-size: 2em;
+    color: #4285F4;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.content-section ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.content-section ul li {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#downloadButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #34A853;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#downloadButton:hover {
+    background-color: #2c8c44;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#message {
+    margin-top: 20px;
+    color: red;
+    font-size: 0.9em;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #4285F4;
+    color: white;
+    margin-top: 40px;
+}
+
+document.getElementById('downloadButton').addEventListener('click', function() {
+    document.getElementById('message').innerText = 'Your download will start shortly.';
+});
